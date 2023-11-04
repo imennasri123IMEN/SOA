@@ -1,0 +1,33 @@
+
+<div class="col-md-6 offset-md-3">
+    <h3> Create admin</h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> age</label>
+            <input type="number" class ="form-control" id = "age"
+                [(ngModel)] = "admin.age" name = "age">
+        </div>
+
+        <div class="form-group">
+            <label> nom</label>
+            <input type="text" class ="form-control" id = "nom"
+                [(ngModel)] = "admin.nom" name = "nom">
+        </div>
+    
+        
+    
+        <div class="form-group">
+            <label> Ncarte</label>
+            <input type="text" class ="form-control" id = "carte"
+                [(ngModel)] = "admin.carte" name = "carte">
+        </div>
+        <div class="form-group">
+            <label> role</label>
+            <input type="text" class ="form-control" id = "role"
+                [(ngModel)] = "admin.role" name = "role">
+        </div>
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 

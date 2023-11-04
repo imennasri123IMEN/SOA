@@ -1,0 +1,34 @@
+
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<h2> admin List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> age</th>
+            <th> nom </th>
+            <th> Ncarte</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let admin of admins" >
+            <td> {{admin.nom}} </td>
+            <td> {{admin.age}} </td>
+            <td> {{admin.carte}} </td>
+            <td>
+                <button (click) = "updateadmin(admin.id)" class = "btn btn-info"> Update</button>
+                <button (click) = " deleteadmin(admin.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "adminDetails(admin.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
